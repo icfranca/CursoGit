@@ -9,6 +9,6 @@ WORKDIR /app
 
 # Exponha a porta 8000
 EXPOSE 80
-
+EXPOSE NA PORTA 8080
 # Comando para iniciar o servidor HTTP
 CMD ["python", "-m", "http.server", "8000"]
