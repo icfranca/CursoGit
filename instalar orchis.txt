@@ -1,0 +1,171 @@
+1 - Update system
+sudo apt update && sudo apt upgrade -y
+2 -  Download recursos 
+
+3 - Gnome Tweaks
+sudo apt install gnome-tweaks
+sudo apt install gnome-shell-extensions
+
+4  - Instalar Tema Orchis GTK
+mkdir -p $HOME/.themes
+unzip -o $HOME/Downloads/GTK-Themes.zip -d $HOME/.themes
+ln -sf $HOME/.themes/Orchis-Dark/gtk-4.0/ {assets,gtk.css,gtk-dark.css} $HOME/.config/gtk-4.0/
+
+5 -  Cursors and Icons
+mkdir -p $HOME/.local/share/icons
+unzip -o $HOME/Downloads/icon-themes.zip -d $HOME/.local/share/icons
+
+mkdir -p $HOME/.icons
+unzip -o $HOME/Downloads/cursors-theme.zip -d $HOME/.icons
+
+6 - Install Fontes e Papel de parede
+unzip -o $HOME/Downloads/fonts.zip -d $HOME/.local/share
+sudo unzip -o $HOME/Downloads/wallpapers.zip -d /usr/share/backgrounds/
+
+7 - Instalar Conky Widget
+sudo apt install conky-all jq curl playerctl -y
+
+Cd ~/Downloads
+unzip ~/Downloads/conky-config.zip -d $HOME/.config
+
+8 - Install Cava Audio Visualizer
+sudo apt install cava
+unzip $HOME/Downloads/cava-config.zip -d $HOME/.config/
+
+8.1 - Install NeoFech
+sudo apt install neofetch -y
+unzip $HOME/Downloads/neofetch-config.zip -d $HOME/.config/
+
+9 - Install Shell and Oh my posh
+
+9.1 - Instalar o Shell Fish
+sudo apt install fish -y
+
+9.1.1 - Altera o SHell para fish
+sudo apt install fish -y
+chsh -s /usr/bin/fish
+
+9.2 Instalar Oh-My-Posh
+sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
+
+sudo chmod +x /usr/local/bin/oh-my-posh
+
+9.2.1 - Instalar Fish Shell e o Oh My posh
+unzip -o $HOME/Downloads/fishomp-config.zip -d $HOME
+chmod u+rw ~/.poshthemes/*.json
+
+10 - Habilitar Flatpak e Appimage suport
+sudo apt install gnome-software gnome-software-plugin-flatpak flatpak libfuse2 -y
+10.1 - Repositório  Flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+10.2 - Instalar diversos pacotes flatpak
+
+flatpak install flathub io.bassi.Amberol -y
+
+flatpak install flathub net.agalwood.Motrix -y
+
+flatpak install flathub com.rafaelmardojai.Blanket -y
+
+flatpak install flathub com.github.KRTirtho.Spotube -y
+
+flatpak install flathub com.mattjakeman.ExtensionManager -y
+
+10.3 -Habilitar o tema para suport Flatpak
+
+sudo flatpak override --filesystem=$HOME/.themes
+sudo flatpak override --filesystem=$HOME/.local/share/icons
+sudo flatpak override --filesystem=xdg-config/gtk-4.0
+
+11 - Instalar Gnome Apps
+sudo apt install gnome-weather \
+gnome-maps \
+gnome-audio \
+gnome-calendar \
+gnome-clocks \
+gnome-connections \
+gnome-console \
+gnome-contacts \
+gnome-music \
+vlc \
+gnome-shell-pomodoro -y
+
+12 - Instalar e alterar PlyMouth Theme
+Altera a tela de inicialização , pode não ser necessário
+
+https://github.com/adi1090x/plymouth-themes/blob/master/README.md
+
+git clone https://github.com/adi1090x/plymouth-themes.git
+
+# make sure you have the packages for plymouth
+sudo apt install plymouth
+
+# after downloading or cloning themes, copy the selected theme in plymouth theme dir
+sudo cp -r angular /usr/share/plymouth/themes/
+
+# install the new theme (angular, in this case)
+sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/loader/loader.plymouth 100
+
+# select the theme to apply
+sudo update-alternatives --config default.plymouth
+#(select the number for installed theme, angular in this case)
+
+# update initramfs
+sudo update-initramfs -u
+
+
+13 - Aplicar Gnome Shell Settings
+unzip $HOME/Downloads/ubuntu-desktop-settings.zip -d $HOME/Downloads
+dconf load / < $HOME/Downloads/ubuntu-desktop-settings.conf
+
+14 - Remover Snaps e Apps
+
+snap list
+
+sudo snap remove --purge firefox
+sudo snap remove --purge snap-store
+sudo snap remove --purge gnome 42-2204
+
+sudo snap remove --purge gtk-common-themes
+sudo snap remove --purge snapd-desktop-integration
+sudo snap remove --purge firmware-updater
+sudo snap remove --purge core22
+sudo snap remove --purge bare
+sudo snap remove --purge snapd
+
+sudo apt autoremove --remove snapd -y
+sudo rm -rf /var/cache/snapd
+
+echo "Package: snapd
+Pin: release a=*
+Pin-Priority: -10" | sudo tee /etc/apt/preferences.d/nosnap.pref
+
+sudo apt update
+
+sudo add-apt-repository -y ppa:mozillateam/ppa $$ sudo apt update
+
+echo 'APT::Key::Assert-Pubkey-Algo "";' | sudo tee /etc/apt/apt.conf.d/99weakkey-warning
+
+sudo apt update
+14.1 - Instalar Firefox PPA
+sudo apt install -y -t 'o=LP-PPA-mozillateam' firefox
+
+Permitir atualizações não assistidas
+
+echo "Unattended-Upgrade::Allowed-Origins:: \"LP-PPA-mozillateam:$distro_codename\";" | sudo tee /etc/apt.conf.d/51unatetended-upgrades-firefox
+
+echo 'Package: firefox*
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 501' | sudo tee /etc/apt/preferences.d/mozillateamppa
+
+sudo apt update
+
+14.2 - Migrar dados do firefox snap para o .deb
+mkdir -p $HOME/.mozilla/firefox
+cp -af $HOME/Downloads/snap/firefox/common/.mozilla/firefox* $HOME/.mozilla/firefox
+
+15 - Tema Firefox MAC
+
+git clone https://github.com/vinceliuice/WhiteSur-firefox-theme.git
+./install -m 
+
