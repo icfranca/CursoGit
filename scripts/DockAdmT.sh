@@ -18,7 +18,7 @@ funcaolistrun() {
 	    	echo "******************************************************************************"
 			echo 
 			
-			#Gera lista de containers em execução
+			#Gera lista de containers em execução / Voltar para o teste com cut pois o awk não está funcionando bem
 			contnamerun=$(docker ps --filter "status=running" --format "table {{.ID}} \t | \t {{.Status}} \t | \t {{.Names}}" | awk '/Up/ && /([a-zA-Z0-9\_]{3,30})/')
 		
 		if [ -n "$contnamerun" ]; then
