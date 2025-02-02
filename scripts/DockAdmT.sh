@@ -1,6 +1,7 @@
 #/bin/sh
 #Script para administração de container Docker
 #Autor: Israel C. Franca
+#Data: 02/02/2026
 #
 clear
 #
