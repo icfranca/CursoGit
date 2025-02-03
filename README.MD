@@ -21,6 +21,8 @@ Para instalação, foi seguido instruções do guia oficial no site [site oficia
 ### Configurando ambiente do usuário
 ```sh
 git config --global user.name "Nome Sobrenome"
+```
+```sh
 git config --global user.email seuemail@email.com
 ```
 
