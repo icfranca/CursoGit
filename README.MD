@@ -4,9 +4,7 @@
 1. [Introdução](#introdução)
 2. [Instalação](#instalação)
 3. [Uso](#uso)
-<!-- 4. [Contribuição](#contribuição) -->
-<!-- 5. [Licença](#licença) -->
-<!-- 6. [Contato](#contato) -->
+
 
 ## Introdução
 
