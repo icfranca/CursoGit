@@ -18,6 +18,12 @@ Para instalação, foi seguido instruções do guia oficial no site [site oficia
 
 ## Comandos e definições dos comandos aprendiso.
 
+#### Exibindo logs
+
+```sh
+git log
+```
+
 ### Configurando seu nome de usuário e e-mail (globalmente)
 ```sh
 git config --global user.name "Nome Sobrenome"
@@ -114,6 +120,37 @@ it reset --hard
 it reset --mixex
 ```
 git reset nome do arquivo ---> remove o arquivo do commit.
+
+### Trabalhando com branches
+
+#### Exibe os branches
+```sh
+git branch
+```
+
+#### Trocar de Branch 
+
+```sh
+ git checkout branche
+```
+
+#### Trocar de Branch e criar uma nova
+
+```sh
+ git checkout -b nova-branch
+```
+
+#### Deletar uma Branch
+
+```sh
+ git branch –d nome-da-branch
+```
+
+#### Ver o último commit de cada Branch:
+
+```sh
+ git branch -v
+```
 
 <!-- ## Contribuição -->
 
