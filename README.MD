@@ -3,18 +3,18 @@
 
 1. [Introdução](#introdução)
 2. [Instalação](#instalação)
-3. [Comandos](#comandos-e-definições-dos-comandos-estudadosomandos)
+3. [Comandos](#comandos)
 
 
 ## Introdução
 
 Repositório do curso de Git com anotações diversas sobre o conteúdo abordado no curso.
 
-## Instalação do GIT
+## Instalação
 
 Para instalação, foi seguido instruções do guia oficial no site [site oficial](https://git-scm.com/).
 
-## Comandos e definições dos comandos estudados.
+## Comandos
 
 ### Exibindo logs
 
@@ -37,7 +37,7 @@ git config --global user.email seuemail@email.com
 
 ```
 
-## Trabalhando com repositórios
+### Trabalhando com repositórios
 
 #### Clona um repositório 
 
@@ -95,7 +95,7 @@ git remote add origin https://github.com/username/nome-do-repositorio.git
 ```sh
 git push -u origin main
 ```
-## Desfazer alterações nos repositórios
+### Desfazer alterações nos repositórios
 
 #### Alterar mensagem do ultimo commit
 
