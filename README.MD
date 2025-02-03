@@ -168,7 +168,7 @@ git clone endereço --branch nomebrach --single-branch
 
 ### Recuperar arquivo apagado
 ```sh
-git stath "nome do arquivo"
+git stash "nome do arquivo"
 ```
 
 <!-- ## Contribuição -->
