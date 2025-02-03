@@ -150,6 +150,27 @@ git branch
  git branch -v
 ```
 
+### Comandos úteis
+
+Baixa conteúdo da branch remota sem alterar a local
+
+```sh
+git fetch
+```
+Após, roda o push para atualizar o repósitório
+
+
+```sh
+git push
+```
+### Clonar um branch
+git clone endereço --branch nomebrach --single-branch
+
+### Recuperar arquivo apagado
+```sh
+git stath "nome do arquivo"
+```
+
 <!-- ## Contribuição -->
 
 <!-- Contribuições são bem-vindas! Por favor, envie um pull request ou abra uma issue para discutir as mudanças que deseja fazer. -->
