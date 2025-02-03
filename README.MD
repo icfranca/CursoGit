@@ -18,6 +18,12 @@ Para instalação, foi seguido instruções do guia oficial no site [site oficia
 
 ## Comandos e definições dos comandos aprendiso.
 
+### Configurando ambiente do usuário
+```sh
+git config --global user.name "Nome Sobrenome"
+git config --global user.email seuemail@email.com
+```
+
 Aqui estão alguns comandos básicos do GIT:
 
 ```sh
@@ -25,7 +31,8 @@ git init # inicia um repositório local
 git status # exibe o status do repositório, mostra arquivos e diretórios rastreados para comitar.
 git add . # Adiciona todos os arquivos na fila de rastreamento
 git commit -m "mensagem de commit" # Prepara todos os arquivos em fila de rastreamento para envio
-git push # Envia os arquivos que estão sendo rastreados para o repositório.
+git push # “empurra” as alterações do repositório local para o remoto.
+git pull # “puxa” as alterações do repositório remoto para o local (busca e mescla).
 ```
 
 <!-- ## Contribuição -->
