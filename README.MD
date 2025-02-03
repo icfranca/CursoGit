@@ -18,7 +18,7 @@ Para instalação, foi seguido instruções do guia oficial no site [site oficia
 
 ## Comandos e definições dos comandos aprendiso.
 
-### Configurando ambiente do usuário
+### Configurando seu nome de usuário e e-mail (globalmente)
 ```sh
 git config --global user.name "Nome Sobrenome"
 ```
@@ -26,7 +26,12 @@ git config --global user.name "Nome Sobrenome"
 git config --global user.email seuemail@email.com
 ```
 
-Aqui estão alguns comandos básicos do GIT:
+### Configurando o nome da Branch Padrão
+
+```sh
+ git config --global init.defaultBranch main
+
+```
 
 ## Trabalhando com repositórios
 
@@ -44,10 +49,19 @@ git clone https://github.com/user/repositorio.git
 git clone https://github.com/user/repositorio.git
 ```
 
+### Criando um Repositório Local
+
 #### Inicializa o repositório local.
 ```sh
 git init 
+
 ```
+
+#### Conecte o repositório local com o repositório remoto:
+```sh
+git remote add origin https://github.com/username/nome-do-repositorio.git
+```
+
 #### Exibe o status do repositório, mostra arquivos e diretórios rastreados para comitar.
 ```sh
 git status 
@@ -69,6 +83,12 @@ git push
 ```sh
 git pull 
 ```
+
+## Desfazer alterações nos repositórios
+
+
+
+
 <!-- ## Contribuição -->
 
 <!-- Contribuições são bem-vindas! Por favor, envie um pull request ou abra uma issue para discutir as mudanças que deseja fazer. -->
