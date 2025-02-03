@@ -3,7 +3,7 @@
 
 1. [Introdução](#introdução)
 2. [Instalação](#instalação)
-3. [Uso](#uso)
+3. [Comandos](#comandos-e-definições-dos-comandos-estudadosomandos)
 
 
 ## Introdução
@@ -14,7 +14,7 @@ Repositório do curso de Git com anotações diversas sobre o conteúdo abordado
 
 Para instalação, foi seguido instruções do guia oficial no site [site oficial](https://git-scm.com/).
 
-## Comandos e definições dos comandos aprendiso.
+## Comandos e definições dos comandos estudados.
 
 #### Exibindo logs
 
