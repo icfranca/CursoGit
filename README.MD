@@ -27,8 +27,7 @@ git config --global user.email seuemail@email.com
 Aqui estão alguns comandos básicos do GIT:
 
 ```sh
-# inicia um repositório local
-git init 
+git init # inicia um repositório local
 git status # exibe o status do repositório, mostra arquivos e diretórios rastreados para comitar.
 git add . # Adiciona todos os arquivos na fila de rastreamento
 git commit -m "mensagem de commit" # Prepara todos os arquivos em fila de rastreamento para envio
