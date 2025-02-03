@@ -1,4 +1,4 @@
-# Curso GIT
+# Curso GIT - DIO
 ## Índice
 
 1. [Introdução](#introdução)
