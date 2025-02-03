@@ -39,16 +39,11 @@ git config --global user.email seuemail@email.com
 
 ### Trabalhando com repositórios
 
-#### Clona um repositório 
+#### Clonar um repositório 
 
 Clona um repositório Git existente para um novo diretório (pasta) local.
 
 
-```sh
-git clone https://github.com/user/repositorio.git
-```
-
-#### Clona um repositório 
 ```sh
 git clone https://github.com/user/repositorio.git
 ```
