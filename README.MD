@@ -16,7 +16,7 @@ Para instalação, foi seguido instruções do guia oficial no site [site oficia
 
 ## Comandos e definições dos comandos estudados.
 
-#### Exibindo logs
+### Exibindo logs
 
 ```sh
 git log
