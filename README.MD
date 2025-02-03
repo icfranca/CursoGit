@@ -83,11 +83,37 @@ git push
 ```sh
 git pull 
 ```
+#### Conecanto repoistório remoto
 
+```sh
+git remote add origin https://github.com/username/nome-do-repositorio.git
+```
+```sh
+git push -u origin main
+```
 ## Desfazer alterações nos repositórios
 
+#### Alterar mensagem do ultimo commit
 
+Digitando apenas git commit --amend será aberto o editor com os dados do ultimo commit.
 
+```sh
+git commit --amend –m"nova mensagem"
+```
+### Desfazer um commit
+
+git reset --soft / --hard ou --mixed
+
+```sh
+it reset --soft
+```
+```sh
+it reset --hard
+```
+```sh
+it reset --mixex
+```
+git reset nome do arquivo ---> remove o arquivo do commit.
 
 <!-- ## Contribuição -->
 
