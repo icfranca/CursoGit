@@ -32,8 +32,6 @@ Aqui estão alguns comandos básicos do GIT:
 
 #### Clona um repositório 
 
-[] git clone
-
 Clona um repositório Git existente para um novo diretório (pasta) local.
 
 
